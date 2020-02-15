@@ -57,5 +57,36 @@ let domReady = function (callback) {
  * */
 
 domReady(function () {
-    
+
+    //seleccionar los h-sliders
+    let sliders = document.querySelectorAll(".h-slider");
+
+    sliders.forEach(function (element) {
+        const back = element.querySelector(".back"); // < (botón de regreso)
+        const next = element.querySelector(".next"); // > (botón de progreso)
+        const elements = element.querySelectorAll(".h-slider-item");
+
+        /**El elemento que tenga la clase "active" es el elemento visible o activo**/
+        let active = -1;
+        let i = 0;
+        elements.forEach(function (e) {
+            if (e.classList.contains("active")) {
+                active = i;
+            }
+            i++;
+        });
+        next.addEventListener("click", function () {
+            if(active+1 < elements.length){
+                elements[active].classList.remove("active");
+                elements[++active].classList.add("active");
+            }
+        });
+        back.addEventListener("click", function () {
+            if(active-1 >= 0) {
+                elements[active].classList.remove("active");
+                elements[--active].classList.add("active");
+            }
+        });
+    });
+
 });
