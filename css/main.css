@@ -12,12 +12,20 @@
 }
 
 .h-slider .h-slider-item:not(.active){
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
     display: none;
+    transition: all 3s linear;
 }
 
 .h-slider .h-slider-item {
+    transition: all 3s linear;
     width: 100%;
     display: table-cell;
+    visibility: visible;
+    height: auto;
+    opacity: 1;
 }
 
 .h-slider .h-slider-text {
