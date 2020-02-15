@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+/**Estilos de arriba pueden ser borrados*/
+
+.h-slider {
+    background: transparent;
+    width: 100%;
+    display: table;
+    position: relative;
+}
+
+.h-slider .h-slider-item:not(.active){
+    display: none;
+}
+
+.h-slider .h-slider-item {
+    width: 100%;
+    display: table-cell;
+}
+
+.h-slider .h-slider-text {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.h-slider .h-controls {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.h-slider .h-controls .back, .h-slider .h-controls .next {
+    position: absolute;
+    font-weight: bold;
+    font-size: 5rem;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.h-slider .h-controls .back:hover, .h-slider .h-controls .next:hover {
+    cursor: pointer;
+}
+.h-slider .h-controls .back {
+    left: 0.25rem;
+}
+
+.h-slider .h-controls .next {
+    right: 0.25rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
