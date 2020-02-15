@@ -51,3 +51,11 @@ let domReady = function (callback) {
         }
     }
 };
+
+/**
+ * Borrar la función de arriba si ya se tiene el menu de hamburguesa ya que este también tiene la misma función
+ * */
+
+domReady(function () {
+    
+});
